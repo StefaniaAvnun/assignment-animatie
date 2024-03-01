@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced CSS - Assignment 2</title>
+    <style>
+    body {
+        margin: 0;  
+    }
+    #fundal {
+        background-color: #050210;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    #cerc1 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 300px;
+        width: 300px;
+        margin: auto;
+        border-radius: 100%;
+
+        animation-name: animatieCerc1;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    #cerc1 div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#55fb9f,#b97aff, #fb5dad);
+        border-radius: 100%;
+    }
+
+    #cerc1 div:nth-child(1) {
+        filter: blur(5px);
+    }
+    #cerc1 div:nth-child(2) {
+        filter: blur(10px);
+    }
+    #cerc1 div:nth-child(3) {
+        filter: blur(15px);
+    }
+    #cerc1 div:nth-child(4) {
+        filter: blur(25px);
+    }
+
+
+    #cerc2 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 250px;
+        width: 250px;
+        margin: auto;
+        background-color: #050210;
+        border-radius: 100%;
+    }
+
+    #cerc3 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 250px;
+        width: 250px;
+        margin: auto;
+        background-color: #050210;
+        border-radius: 100%;
+
+        animation-name: animatieCerc3;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes animatieCerc1 {
+        0% {
+            transform: rotate(0deg);
+            background: linear-gradient(#55fb9f,#b97aff, #fb5dad);
+           
+        }
+     
+        100% {
+            transform: rotate(360deg);
+            background: linear-gradient(#55fb9f,#b97aff, #fb5dad);
+            
+        }
+    }
+    
+    @keyframes animatieCerc3 {
+        from {
+            transform: scale(0);
+            background: linear-gradient(#55fb9f,#b97aff, #fb5dad);
+            opacity: 5%;
+        }
+        to {
+            transform: scale(1);
+            background: linear-gradient(#55fb9f,#b97aff, #fb5dad);
+            opacity: 5%;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="fundal">
+        <div id="cerc1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="cerc2"></div>
+        <div id="cerc3"></div>
+    </div>
+</body>
+
+</html>
